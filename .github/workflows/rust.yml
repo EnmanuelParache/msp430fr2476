@@ -1,0 +1,27 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: enmanuelparache/msp430_rs_env:latest    
+      options: --user root  
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: su developer -c 'sudo chown -R developer . && source ~/.bashrc && cargo build'
+    - name: Build examples
+      run: su developer -c 'sudo chown -R developer . && source ~/.bashrc && cargo build --examples'
+    - name: Run tests
+      run: su developer -c 'sudo chown -R developer . && source ~/.bashrc && cargo test --verbose'
