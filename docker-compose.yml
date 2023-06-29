@@ -3,4 +3,4 @@ services:
     image: "enmanuelparache/msp430_rs_env:latest"
     container_name: 'msp430fr2476'
     volumes:
-      - .:/home/developer/msp430fr2476
+      - .:/home/developer/msp430fr2476:w
