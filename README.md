@@ -1,3 +1,5 @@
+# Archived
+This repository/crate was archived in favor of [msp430fr247x](https://crates.io/crates/msp430fr247x) as it's a more generic name. 
 # `msp430fr2476`
 
 > Peripheral access API for MSP430FR2476 microcontroller

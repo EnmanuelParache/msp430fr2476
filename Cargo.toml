@@ -1,6 +1,6 @@
 [package]
 name = "msp430fr2476"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Enmanuel Parache <enmanuelparache@gmail.com"]
 description = "Peripheral access crate for TI MSP430FR2476 microcontroller"
